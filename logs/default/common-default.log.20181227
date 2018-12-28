@@ -1,0 +1,936 @@
+2018-12-27 18:12:12,211 [main-3304] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 3304 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2018-12-27 18:12:12,214 [main-3304] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2018-12-27 18:12:13,262 [main-3304] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - [Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'activitiApplication': Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'datasourceConfig': Unsatisfied dependency expressed through field 'mapperLocations'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist]
+2018-12-27 18:12:13,270 [main-3304] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.]
+2018-12-27 18:12:13,289 [main-3304] ERROR org.springframework.boot.SpringApplication - [Application run failed]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'activitiApplication': Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'datasourceConfig': Unsatisfied dependency expressed through field 'mapperLocations'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at self.activiti.ActivitiApplication.main(ActivitiApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'datasourceConfig': Unsatisfied dependency expressed through field 'mapperLocations'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:676)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:94)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:349)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:301)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'datasourceConfig': Unsatisfied dependency expressed through field 'mapperLocations'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1453)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1308)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:668)
+	... 41 common frames omitted
+Caused by: org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist
+	at org.springframework.beans.TypeConverterSupport.doConvert(TypeConverterSupport.java:80)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:60)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 57 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist
+	at org.springframework.core.io.support.ResourceArrayPropertyEditor.setAsText(ResourceArrayPropertyEditor.java:120)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:466)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:439)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:192)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:117)
+	at org.springframework.beans.TypeConverterSupport.doConvert(TypeConverterSupport.java:70)
+	... 61 common frames omitted
+2018-12-27 18:12:56,070 [main-3307] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 3307 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2018-12-27 18:12:56,074 [main-3307] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2018-12-27 18:12:57,244 [main-3307] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Starting...]
+2018-12-27 18:12:57,378 [main-3307] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Start completed.]
+2018-12-27 18:12:57,984 [main-3307] INFO  org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory - [Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.]
+2018-12-27 18:12:58,062 [main-3307] INFO  org.activiti.engine.impl.ProcessEngineImpl - [ProcessEngine default created]
+2018-12-27 18:12:58,063 [main-3307] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2018-12-27 18:12:58,064 [Thread-9-3307] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} starting to acquire async jobs due]
+2018-12-27 18:12:58,064 [Thread-8-3307] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} starting to acquire async jobs due]
+2018-12-27 18:12:58,064 [Thread-10-3307] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} starting to reset expired jobs]
+2018-12-27 18:12:58,090 [main-3307] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$5700a4d5: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:12:58,091 [main-3307] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - [Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.activiti.spring.boot.SecurityAutoConfiguration': Initialization of bean failed; nested exception is java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:12:58,091 [main-3307] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Shutting down the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2018-12-27 18:12:58,091 [activiti-acquire-timer-jobs-3307] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} stopped async job due acquisition]
+2018-12-27 18:12:58,091 [activiti-acquire-async-jobs-3307] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} stopped async job due acquisition]
+2018-12-27 18:12:58,091 [activiti-reset-expired-jobs-3307] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} stopped resetting expired jobs]
+2018-12-27 18:12:58,092 [main-3307] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown initiated...]
+2018-12-27 18:12:58,096 [main-3307] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown completed.]
+2018-12-27 18:12:58,103 [main-3307] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.]
+2018-12-27 18:12:58,111 [main-3307] ERROR org.springframework.boot.SpringApplication - [Application run failed]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.activiti.spring.boot.SecurityAutoConfiguration': Initialization of bean failed; nested exception is java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at self.activiti.ActivitiApplication.main(ActivitiApplication.java:10)
+Caused by: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy
+	at sun.reflect.annotation.AnnotationParser.parseClassArray(AnnotationParser.java:724)
+	at sun.reflect.annotation.AnnotationParser.parseArray(AnnotationParser.java:531)
+	at sun.reflect.annotation.AnnotationParser.parseMemberValue(AnnotationParser.java:355)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotation2(AnnotationParser.java:286)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:120)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:72)
+	at java.lang.Class.createAnnotationData(Class.java:3521)
+	at java.lang.Class.annotationData(Class.java:3510)
+	at java.lang.Class.createAnnotationData(Class.java:3526)
+	at java.lang.Class.annotationData(Class.java:3510)
+	at java.lang.Class.getAnnotation(Class.java:3415)
+	at java.lang.reflect.AnnotatedElement.isAnnotationPresent(AnnotatedElement.java:258)
+	at java.lang.Class.isAnnotationPresent(Class.java:3425)
+	at org.springframework.core.annotation.AnnotatedElementUtils.hasAnnotation(AnnotatedElementUtils.java:599)
+	at org.springframework.aop.support.annotation.AnnotationClassFilter.matches(AnnotationClassFilter.java:65)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:269)
+	at org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor.isEligible(AbstractAdvisingBeanPostProcessor.java:133)
+	at org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor.isEligible(AbstractAdvisingBeanPostProcessor.java:115)
+	at org.springframework.aop.framework.autoproxy.AbstractBeanFactoryAwareAdvisingPostProcessor.isEligible(AbstractBeanFactoryAwareAdvisingPostProcessor.java:70)
+	at org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor.postProcessAfterInitialization(AbstractAdvisingBeanPostProcessor.java:85)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 14 common frames omitted
+2018-12-27 18:13:41,362 [main-3317] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 3317 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2018-12-27 18:13:41,368 [main-3317] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2018-12-27 18:13:43,477 [main-3317] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Starting...]
+2018-12-27 18:13:43,628 [main-3317] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Start completed.]
+2018-12-27 18:13:44,229 [main-3317] INFO  org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory - [Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.]
+2018-12-27 18:13:44,302 [main-3317] INFO  org.activiti.engine.impl.ProcessEngineImpl - [ProcessEngine default created]
+2018-12-27 18:13:44,303 [main-3317] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2018-12-27 18:13:44,304 [Thread-12-3317] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} starting to acquire async jobs due]
+2018-12-27 18:13:44,304 [Thread-11-3317] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} starting to acquire async jobs due]
+2018-12-27 18:13:44,304 [Thread-13-3317] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} starting to reset expired jobs]
+2018-12-27 18:13:44,332 [main-3317] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$e0a1a6e9: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:13:44,334 [main-3317] WARN  org.springframework.context.annotation.AnnotationConfigApplicationContext - [Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.activiti.spring.boot.SecurityAutoConfiguration': Initialization of bean failed; nested exception is java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:13:44,334 [main-3317] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Shutting down the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2018-12-27 18:13:44,334 [activiti-acquire-timer-jobs-3317] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} stopped async job due acquisition]
+2018-12-27 18:13:44,334 [activiti-reset-expired-jobs-3317] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} stopped resetting expired jobs]
+2018-12-27 18:13:44,334 [activiti-acquire-async-jobs-3317] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} stopped async job due acquisition]
+2018-12-27 18:13:44,335 [main-3317] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown initiated...]
+2018-12-27 18:13:44,341 [main-3317] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown completed.]
+2018-12-27 18:13:44,349 [main-3317] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.]
+2018-12-27 18:13:44,359 [main-3317] ERROR org.springframework.boot.SpringApplication - [Application run failed]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.activiti.spring.boot.SecurityAutoConfiguration': Initialization of bean failed; nested exception is java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at self.activiti.ActivitiApplication.main(ActivitiApplication.java:10)
+Caused by: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy
+	at sun.reflect.annotation.AnnotationParser.parseClassArray(AnnotationParser.java:724)
+	at sun.reflect.annotation.AnnotationParser.parseArray(AnnotationParser.java:531)
+	at sun.reflect.annotation.AnnotationParser.parseMemberValue(AnnotationParser.java:355)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotation2(AnnotationParser.java:286)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:120)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:72)
+	at java.lang.Class.createAnnotationData(Class.java:3521)
+	at java.lang.Class.annotationData(Class.java:3510)
+	at java.lang.Class.createAnnotationData(Class.java:3526)
+	at java.lang.Class.annotationData(Class.java:3510)
+	at java.lang.Class.getAnnotation(Class.java:3415)
+	at java.lang.reflect.AnnotatedElement.isAnnotationPresent(AnnotatedElement.java:258)
+	at java.lang.Class.isAnnotationPresent(Class.java:3425)
+	at org.springframework.core.annotation.AnnotatedElementUtils.hasAnnotation(AnnotatedElementUtils.java:599)
+	at org.springframework.aop.support.annotation.AnnotationClassFilter.matches(AnnotationClassFilter.java:65)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:269)
+	at org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor.isEligible(AbstractAdvisingBeanPostProcessor.java:133)
+	at org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor.isEligible(AbstractAdvisingBeanPostProcessor.java:115)
+	at org.springframework.aop.framework.autoproxy.AbstractBeanFactoryAwareAdvisingPostProcessor.isEligible(AbstractBeanFactoryAwareAdvisingPostProcessor.java:70)
+	at org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor.postProcessAfterInitialization(AbstractAdvisingBeanPostProcessor.java:85)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 14 common frames omitted
+2018-12-27 18:16:34,169 [main-3399] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 3399 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2018-12-27 18:16:34,173 [main-3399] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2018-12-27 18:16:35,209 [main-3399] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$9c0e16eb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)]
+2018-12-27 18:16:35,234 [main-3399] INFO  org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping - [Supporting [WS-Addressing August 2004, WS-Addressing 1.0]]
+2018-12-27 18:16:35,605 [main-3399] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat initialized with port(s): 10011 (http)]
+2018-12-27 18:16:35,616 [main-3399] INFO  org.apache.coyote.http11.Http11NioProtocol - [Initializing ProtocolHandler ["http-nio-10011"]]
+2018-12-27 18:16:35,623 [main-3399] INFO  org.apache.catalina.core.StandardService - [Starting service [Tomcat]]
+2018-12-27 18:16:35,623 [main-3399] INFO  org.apache.catalina.core.StandardEngine - [Starting Servlet Engine: Apache Tomcat/9.0.13]
+2018-12-27 18:16:35,629 [main-3399] INFO  org.apache.catalina.core.AprLifecycleListener - [The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liuhao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]]
+2018-12-27 18:16:35,701 [main-3399] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring embedded WebApplicationContext]
+2018-12-27 18:16:35,702 [main-3399] INFO  org.springframework.web.context.ContextLoader - [Root WebApplicationContext: initialization completed in 1478 ms]
+2018-12-27 18:16:36,398 [main-3399] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$dfc20bd8: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:16:36,399 [main-3399] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$dfc20bd8: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:16:36,455 [main-3399] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [Initializing ExecutorService 'applicationTaskExecutor']
+2018-12-27 18:16:36,466 [main-3399] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$dfc20bd8: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:16:36,467 [main-3399] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$dfc20bd8: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:16:36,514 [main-3399] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:16:36,514 [main-3399] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [Shutting down ExecutorService 'applicationTaskExecutor']
+2018-12-27 18:16:36,517 [main-3399] INFO  org.apache.catalina.core.StandardService - [Stopping service [Tomcat]]
+2018-12-27 18:16:36,529 [main-3399] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.]
+2018-12-27 18:16:36,538 [main-3399] ERROR org.springframework.boot.SpringApplication - [Application run failed]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at self.activiti.ActivitiApplication.main(ActivitiApplication.java:10)
+Caused by: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy
+	at sun.reflect.annotation.AnnotationParser.parseClassArray(AnnotationParser.java:724)
+	at sun.reflect.annotation.AnnotationParser.parseArray(AnnotationParser.java:531)
+	at sun.reflect.annotation.AnnotationParser.parseMemberValue(AnnotationParser.java:355)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotation2(AnnotationParser.java:286)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:120)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:72)
+	at java.lang.Class.createAnnotationData(Class.java:3521)
+	at java.lang.Class.annotationData(Class.java:3510)
+	at java.lang.Class.createAnnotationData(Class.java:3526)
+	at java.lang.Class.annotationData(Class.java:3510)
+	at java.lang.Class.getAnnotation(Class.java:3415)
+	at java.lang.reflect.AnnotatedElement.isAnnotationPresent(AnnotatedElement.java:258)
+	at java.lang.Class.isAnnotationPresent(Class.java:3425)
+	at org.springframework.core.annotation.AnnotatedElementUtils.hasAnnotation(AnnotatedElementUtils.java:599)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.isHandler(RequestMappingHandlerMapping.java:205)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:251)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:211)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:199)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:164)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	... 16 common frames omitted
+2018-12-27 18:19:02,165 [main-3406] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 3406 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2018-12-27 18:19:02,168 [main-3406] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2018-12-27 18:19:03,464 [main-3406] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat initialized with port(s): 10011 (http)]
+2018-12-27 18:19:03,477 [main-3406] INFO  org.apache.coyote.http11.Http11NioProtocol - [Initializing ProtocolHandler ["http-nio-10011"]]
+2018-12-27 18:19:03,485 [main-3406] INFO  org.apache.catalina.core.StandardService - [Starting service [Tomcat]]
+2018-12-27 18:19:03,486 [main-3406] INFO  org.apache.catalina.core.StandardEngine - [Starting Servlet Engine: Apache Tomcat/9.0.13]
+2018-12-27 18:19:03,493 [main-3406] INFO  org.apache.catalina.core.AprLifecycleListener - [The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liuhao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]]
+2018-12-27 18:19:03,588 [main-3406] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring embedded WebApplicationContext]
+2018-12-27 18:19:03,588 [main-3406] INFO  org.springframework.web.context.ContextLoader - [Root WebApplicationContext: initialization completed in 1352 ms]
+2018-12-27 18:19:03,989 [main-3406] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$b6643298: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:19:03,989 [main-3406] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$b6643298: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:19:04,035 [main-3406] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [Initializing ExecutorService 'applicationTaskExecutor']
+2018-12-27 18:19:04,044 [main-3406] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$b6643298: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:19:04,045 [main-3406] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$b6643298: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:19:04,085 [main-3406] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:19:04,085 [main-3406] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [Shutting down ExecutorService 'applicationTaskExecutor']
+2018-12-27 18:19:04,087 [main-3406] INFO  org.apache.catalina.core.StandardService - [Stopping service [Tomcat]]
+2018-12-27 18:19:04,097 [main-3406] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.]
+2018-12-27 18:19:04,108 [main-3406] ERROR org.springframework.boot.SpringApplication - [Application run failed]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at self.activiti.ActivitiApplication.main(ActivitiApplication.java:10)
+Caused by: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy
+	at sun.reflect.annotation.AnnotationParser.parseClassArray(AnnotationParser.java:724)
+	at sun.reflect.annotation.AnnotationParser.parseArray(AnnotationParser.java:531)
+	at sun.reflect.annotation.AnnotationParser.parseMemberValue(AnnotationParser.java:355)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotation2(AnnotationParser.java:286)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:120)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:72)
+	at java.lang.Class.createAnnotationData(Class.java:3521)
+	at java.lang.Class.annotationData(Class.java:3510)
+	at java.lang.Class.createAnnotationData(Class.java:3526)
+	at java.lang.Class.annotationData(Class.java:3510)
+	at java.lang.Class.getAnnotation(Class.java:3415)
+	at java.lang.reflect.AnnotatedElement.isAnnotationPresent(AnnotatedElement.java:258)
+	at java.lang.Class.isAnnotationPresent(Class.java:3425)
+	at org.springframework.core.annotation.AnnotatedElementUtils.hasAnnotation(AnnotatedElementUtils.java:599)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.isHandler(RequestMappingHandlerMapping.java:205)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:251)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:211)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:199)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:164)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	... 16 common frames omitted
+2018-12-27 18:21:16,145 [main-3415] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 3415 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2018-12-27 18:21:16,149 [main-3415] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2018-12-27 18:21:16,202 [main-3415] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@63f8276e: startup date [Thu Dec 27 18:21:16 CST 2018]; root of context hierarchy]
+2018-12-27 18:21:17,554 [main-3415] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat initialized with port(s): 10011 (http)]
+2018-12-27 18:21:17,567 [main-3415] INFO  org.apache.coyote.http11.Http11NioProtocol - [Initializing ProtocolHandler ["http-nio-10011"]]
+2018-12-27 18:21:17,576 [main-3415] INFO  org.apache.catalina.core.StandardService - [Starting service [Tomcat]]
+2018-12-27 18:21:17,576 [main-3415] INFO  org.apache.catalina.core.StandardEngine - [Starting Servlet Engine: Apache Tomcat/8.5.34]
+2018-12-27 18:21:17,580 [localhost-startStop-1-3415] INFO  org.apache.catalina.core.AprLifecycleListener - [The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liuhao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]]
+2018-12-27 18:21:17,677 [localhost-startStop-1-3415] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring embedded WebApplicationContext]
+2018-12-27 18:21:17,678 [localhost-startStop-1-3415] INFO  org.springframework.web.context.ContextLoader - [Root WebApplicationContext: initialization completed in 1476 ms]
+2018-12-27 18:21:17,755 [localhost-startStop-1-3415] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - [Servlet dispatcherServlet mapped to [/]]
+2018-12-27 18:21:17,763 [localhost-startStop-1-3415] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'characterEncodingFilter' to: [/*]]
+2018-12-27 18:21:17,763 [localhost-startStop-1-3415] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]
+2018-12-27 18:21:17,763 [localhost-startStop-1-3415] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'httpPutFormContentFilter' to: [/*]]
+2018-12-27 18:21:17,763 [localhost-startStop-1-3415] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'requestContextFilter' to: [/*]]
+2018-12-27 18:21:18,186 [main-3415] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2018-12-27 18:21:18,295 [main-3415] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$a3aa141c: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:21:18,296 [main-3415] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$a3aa141c: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:21:18,380 [main-3415] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - [Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@63f8276e: startup date [Thu Dec 27 18:21:16 CST 2018]; root of context hierarchy]
+2018-12-27 18:21:18,383 [main-3415] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$a3aa141c: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:21:18,383 [main-3415] INFO  org.springframework.core.annotation.AnnotationUtils - [Failed to introspect annotations on class org.activiti.spring.boot.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$a3aa141c: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:21:18,460 [main-3415] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2018-12-27 18:21:18,463 [main-3415] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2018-12-27 18:21:18,466 [main-3415] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy]
+2018-12-27 18:21:18,469 [main-3415] INFO  org.apache.catalina.core.StandardService - [Stopping service [Tomcat]]
+2018-12-27 18:21:18,482 [main-3415] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.]
+2018-12-27 18:21:18,496 [main-3415] ERROR org.springframework.boot.SpringApplication - [Application run failed]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1694)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
+	at self.activiti.ActivitiApplication.main(ActivitiApplication.java:10)
+Caused by: java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy
+	at sun.reflect.annotation.AnnotationParser.parseClassArray(AnnotationParser.java:724)
+	at sun.reflect.annotation.AnnotationParser.parseArray(AnnotationParser.java:531)
+	at sun.reflect.annotation.AnnotationParser.parseMemberValue(AnnotationParser.java:355)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotation2(AnnotationParser.java:286)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:120)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:72)
+	at java.lang.Class.createAnnotationData(Class.java:3521)
+	at java.lang.Class.annotationData(Class.java:3510)
+	at java.lang.Class.createAnnotationData(Class.java:3526)
+	at java.lang.Class.annotationData(Class.java:3510)
+	at java.lang.Class.getAnnotation(Class.java:3415)
+	at java.lang.reflect.AnnotatedElement.isAnnotationPresent(AnnotatedElement.java:258)
+	at java.lang.Class.isAnnotationPresent(Class.java:3425)
+	at org.springframework.core.annotation.AnnotatedElementUtils.hasAnnotation(AnnotatedElementUtils.java:570)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.isHandler(RequestMappingHandlerMapping.java:177)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:218)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:189)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:136)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1690)
+	... 16 common frames omitted
+2018-12-27 18:23:11,782 [main-3420] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 3420 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2018-12-27 18:23:11,837 [main-3420] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2018-12-27 18:23:11,880 [main-3420] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e276594: startup date [Thu Dec 27 18:23:11 CST 2018]; root of context hierarchy]
+2018-12-27 18:23:13,118 [main-3420] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat initialized with port(s): 10011 (http)]
+2018-12-27 18:23:13,128 [main-3420] INFO  org.apache.coyote.http11.Http11NioProtocol - [Initializing ProtocolHandler ["http-nio-10011"]]
+2018-12-27 18:23:13,136 [main-3420] INFO  org.apache.catalina.core.StandardService - [Starting service [Tomcat]]
+2018-12-27 18:23:13,137 [main-3420] INFO  org.apache.catalina.core.StandardEngine - [Starting Servlet Engine: Apache Tomcat/8.5.34]
+2018-12-27 18:23:13,141 [localhost-startStop-1-3420] INFO  org.apache.catalina.core.AprLifecycleListener - [The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liuhao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]]
+2018-12-27 18:23:13,211 [localhost-startStop-1-3420] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring embedded WebApplicationContext]
+2018-12-27 18:23:13,211 [localhost-startStop-1-3420] INFO  org.springframework.web.context.ContextLoader - [Root WebApplicationContext: initialization completed in 1331 ms]
+2018-12-27 18:23:13,292 [localhost-startStop-1-3420] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - [Servlet dispatcherServlet mapped to [/]]
+2018-12-27 18:23:13,296 [localhost-startStop-1-3420] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'characterEncodingFilter' to: [/*]]
+2018-12-27 18:23:13,296 [localhost-startStop-1-3420] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]
+2018-12-27 18:23:13,296 [localhost-startStop-1-3420] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'httpPutFormContentFilter' to: [/*]]
+2018-12-27 18:23:13,296 [localhost-startStop-1-3420] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'requestContextFilter' to: [/*]]
+2018-12-27 18:23:13,680 [main-3420] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2018-12-27 18:23:13,855 [main-3420] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - [Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e276594: startup date [Thu Dec 27 18:23:11 CST 2018]; root of context hierarchy]
+2018-12-27 18:23:13,931 [main-3420] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2018-12-27 18:23:13,933 [main-3420] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2018-12-27 18:23:13,962 [main-3420] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2018-12-27 18:23:13,962 [main-3420] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2018-12-27 18:23:14,225 [main-3420] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Starting...]
+2018-12-27 18:23:14,373 [main-3420] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Start completed.]
+2018-12-27 18:23:14,993 [main-3420] INFO  org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory - [Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.]
+2018-12-27 18:23:15,090 [main-3420] INFO  org.activiti.engine.impl.ProcessEngineImpl - [ProcessEngine default created]
+2018-12-27 18:23:15,092 [main-3420] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2018-12-27 18:23:15,092 [Thread-10-3420] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} starting to acquire async jobs due]
+2018-12-27 18:23:15,092 [Thread-11-3420] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} starting to acquire async jobs due]
+2018-12-27 18:23:15,092 [Thread-12-3420] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} starting to reset expired jobs]
+2018-12-27 18:23:15,362 [main-3420] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Registering beans for JMX exposure on startup]
+2018-12-27 18:23:15,363 [main-3420] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Bean with name 'dataSource' has been autodetected for JMX exposure]
+2018-12-27 18:23:15,368 [main-3420] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]]
+2018-12-27 18:23:15,378 [main-3420] INFO  org.apache.coyote.http11.Http11NioProtocol - [Starting ProtocolHandler ["http-nio-10011"]]
+2018-12-27 18:23:15,412 [main-3420] INFO  org.apache.tomcat.util.net.NioSelectorPool - [Using a shared selector for servlet write/read]
+2018-12-27 18:23:15,426 [main-3420] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat started on port(s): 10011 (http) with context path '']
+2018-12-27 18:23:15,431 [main-3420] INFO  self.activiti.ActivitiApplication - [Started ActivitiApplication in 4.299 seconds (JVM running for 5.181)]
+2018-12-27 18:23:35,138 [activiti-acquire-timer-jobs-3420] ERROR org.activiti.engine.impl.interceptor.CommandContext - [Error while closing command context]
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+### The error may exist in org/activiti/db/mapping/entity/TimerJob.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.TimerJobEntityImpl.selectTimerJobsToExecute-Inline
+### The error occurred while setting parameters
+### SQL: select   RES.*     from ACT_RU_TIMER_JOB RES   where DUEDATE_ <= ?    and LOCK_OWNER_ is null    LIMIT ? OFFSET ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:320)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:305)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:295)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:260)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:254)
+	at org.activiti.engine.impl.persistence.entity.data.impl.MybatisTimerJobDataManager.findTimerJobsToExecute(MybatisTimerJobDataManager.java:69)
+	at org.activiti.engine.impl.persistence.entity.TimerJobEntityManagerImpl.findTimerJobsToExecute(TimerJobEntityManagerImpl.java:70)
+	at org.activiti.engine.impl.cmd.AcquireTimerJobsCmd.execute(AcquireTimerJobsCmd.java:40)
+	at org.activiti.engine.impl.cmd.AcquireTimerJobsCmd.execute(AcquireTimerJobsCmd.java:29)
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42)
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63)
+	at org.activiti.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:47)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.activiti.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:45)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39)
+	at org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable.run(AcquireTimerJobsRunnable.java:57)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:388)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	... 24 common frames omitted
+2018-12-27 18:23:35,138 [activiti-acquire-async-jobs-3420] ERROR org.activiti.engine.impl.interceptor.CommandContext - [Error while closing command context]
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+### The error may exist in org/activiti/db/mapping/entity/Job.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.JobEntityImpl.selectJobsToExecute-Inline
+### The error occurred while setting parameters
+### SQL: select   RES.*    from ACT_RU_JOB RES   where LOCK_EXP_TIME_ is null   LIMIT ? OFFSET ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:320)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:305)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:284)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:268)
+	at org.activiti.engine.impl.persistence.entity.data.impl.MybatisJobDataManager.findJobsToExecute(MybatisJobDataManager.java:56)
+	at org.activiti.engine.impl.persistence.entity.JobEntityManagerImpl.findJobsToExecute(JobEntityManagerImpl.java:88)
+	at org.activiti.engine.impl.cmd.AcquireJobsCmd.execute(AcquireJobsCmd.java:39)
+	at org.activiti.engine.impl.cmd.AcquireJobsCmd.execute(AcquireJobsCmd.java:29)
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42)
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63)
+	at org.activiti.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:47)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.activiti.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:45)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39)
+	at org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable.run(AcquireAsyncJobsDueRunnable.java:53)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:388)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	... 23 common frames omitted
+2018-12-27 18:23:35,141 [activiti-acquire-timer-jobs-3420] ERROR org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [exception during timer job acquisition: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+### The error may exist in org/activiti/db/mapping/entity/TimerJob.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.TimerJobEntityImpl.selectTimerJobsToExecute-Inline
+### The error occurred while setting parameters
+### SQL: select   RES.*     from ACT_RU_TIMER_JOB RES   where DUEDATE_ <= ?    and LOCK_OWNER_ is null    LIMIT ? OFFSET ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist]
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+### The error may exist in org/activiti/db/mapping/entity/TimerJob.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.TimerJobEntityImpl.selectTimerJobsToExecute-Inline
+### The error occurred while setting parameters
+### SQL: select   RES.*     from ACT_RU_TIMER_JOB RES   where DUEDATE_ <= ?    and LOCK_OWNER_ is null    LIMIT ? OFFSET ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:320)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:305)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:295)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:260)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:254)
+	at org.activiti.engine.impl.persistence.entity.data.impl.MybatisTimerJobDataManager.findTimerJobsToExecute(MybatisTimerJobDataManager.java:69)
+	at org.activiti.engine.impl.persistence.entity.TimerJobEntityManagerImpl.findTimerJobsToExecute(TimerJobEntityManagerImpl.java:70)
+	at org.activiti.engine.impl.cmd.AcquireTimerJobsCmd.execute(AcquireTimerJobsCmd.java:40)
+	at org.activiti.engine.impl.cmd.AcquireTimerJobsCmd.execute(AcquireTimerJobsCmd.java:29)
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42)
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63)
+	at org.activiti.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:47)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.activiti.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:45)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39)
+	at org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable.run(AcquireTimerJobsRunnable.java:57)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:388)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	... 24 common frames omitted
+2018-12-27 18:23:35,141 [activiti-acquire-async-jobs-3420] ERROR org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [exception during async job acquisition: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+### The error may exist in org/activiti/db/mapping/entity/Job.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.JobEntityImpl.selectJobsToExecute-Inline
+### The error occurred while setting parameters
+### SQL: select   RES.*    from ACT_RU_JOB RES   where LOCK_EXP_TIME_ is null   LIMIT ? OFFSET ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist]
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+### The error may exist in org/activiti/db/mapping/entity/Job.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.JobEntityImpl.selectJobsToExecute-Inline
+### The error occurred while setting parameters
+### SQL: select   RES.*    from ACT_RU_JOB RES   where LOCK_EXP_TIME_ is null   LIMIT ? OFFSET ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:320)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:305)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:284)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:268)
+	at org.activiti.engine.impl.persistence.entity.data.impl.MybatisJobDataManager.findJobsToExecute(MybatisJobDataManager.java:56)
+	at org.activiti.engine.impl.persistence.entity.JobEntityManagerImpl.findJobsToExecute(JobEntityManagerImpl.java:88)
+	at org.activiti.engine.impl.cmd.AcquireJobsCmd.execute(AcquireJobsCmd.java:39)
+	at org.activiti.engine.impl.cmd.AcquireJobsCmd.execute(AcquireJobsCmd.java:29)
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42)
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63)
+	at org.activiti.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:47)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.activiti.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:45)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39)
+	at org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable.run(AcquireAsyncJobsDueRunnable.java:53)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:388)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	... 23 common frames omitted
+2018-12-27 18:23:45,149 [activiti-acquire-async-jobs-3420] ERROR org.activiti.engine.impl.interceptor.CommandContext - [Error while closing command context]
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+### The error may exist in org/activiti/db/mapping/entity/Job.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.JobEntityImpl.selectJobsToExecute-Inline
+### The error occurred while setting parameters
+### SQL: select   RES.*    from ACT_RU_JOB RES   where LOCK_EXP_TIME_ is null   LIMIT ? OFFSET ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:320)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:305)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:284)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:268)
+	at org.activiti.engine.impl.persistence.entity.data.impl.MybatisJobDataManager.findJobsToExecute(MybatisJobDataManager.java:56)
+	at org.activiti.engine.impl.persistence.entity.JobEntityManagerImpl.findJobsToExecute(JobEntityManagerImpl.java:88)
+	at org.activiti.engine.impl.cmd.AcquireJobsCmd.execute(AcquireJobsCmd.java:39)
+	at org.activiti.engine.impl.cmd.AcquireJobsCmd.execute(AcquireJobsCmd.java:29)
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42)
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63)
+	at org.activiti.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:47)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.activiti.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:45)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39)
+	at org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable.run(AcquireAsyncJobsDueRunnable.java:53)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:388)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	... 23 common frames omitted
+2018-12-27 18:23:45,149 [activiti-acquire-timer-jobs-3420] ERROR org.activiti.engine.impl.interceptor.CommandContext - [Error while closing command context]
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+### The error may exist in org/activiti/db/mapping/entity/TimerJob.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.TimerJobEntityImpl.selectTimerJobsToExecute-Inline
+### The error occurred while setting parameters
+### SQL: select   RES.*     from ACT_RU_TIMER_JOB RES   where DUEDATE_ <= ?    and LOCK_OWNER_ is null    LIMIT ? OFFSET ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:320)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:305)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:295)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:260)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:254)
+	at org.activiti.engine.impl.persistence.entity.data.impl.MybatisTimerJobDataManager.findTimerJobsToExecute(MybatisTimerJobDataManager.java:69)
+	at org.activiti.engine.impl.persistence.entity.TimerJobEntityManagerImpl.findTimerJobsToExecute(TimerJobEntityManagerImpl.java:70)
+	at org.activiti.engine.impl.cmd.AcquireTimerJobsCmd.execute(AcquireTimerJobsCmd.java:40)
+	at org.activiti.engine.impl.cmd.AcquireTimerJobsCmd.execute(AcquireTimerJobsCmd.java:29)
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42)
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63)
+	at org.activiti.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:47)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.activiti.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:45)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39)
+	at org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable.run(AcquireTimerJobsRunnable.java:57)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:388)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	... 24 common frames omitted
+2018-12-27 18:23:45,151 [activiti-acquire-timer-jobs-3420] ERROR org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [exception during timer job acquisition: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+### The error may exist in org/activiti/db/mapping/entity/TimerJob.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.TimerJobEntityImpl.selectTimerJobsToExecute-Inline
+### The error occurred while setting parameters
+### SQL: select   RES.*     from ACT_RU_TIMER_JOB RES   where DUEDATE_ <= ?    and LOCK_OWNER_ is null    LIMIT ? OFFSET ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist]
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+### The error may exist in org/activiti/db/mapping/entity/TimerJob.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.TimerJobEntityImpl.selectTimerJobsToExecute-Inline
+### The error occurred while setting parameters
+### SQL: select   RES.*     from ACT_RU_TIMER_JOB RES   where DUEDATE_ <= ?    and LOCK_OWNER_ is null    LIMIT ? OFFSET ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:320)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:305)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:295)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:260)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:254)
+	at org.activiti.engine.impl.persistence.entity.data.impl.MybatisTimerJobDataManager.findTimerJobsToExecute(MybatisTimerJobDataManager.java:69)
+	at org.activiti.engine.impl.persistence.entity.TimerJobEntityManagerImpl.findTimerJobsToExecute(TimerJobEntityManagerImpl.java:70)
+	at org.activiti.engine.impl.cmd.AcquireTimerJobsCmd.execute(AcquireTimerJobsCmd.java:40)
+	at org.activiti.engine.impl.cmd.AcquireTimerJobsCmd.execute(AcquireTimerJobsCmd.java:29)
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42)
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63)
+	at org.activiti.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:47)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.activiti.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:45)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39)
+	at org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable.run(AcquireTimerJobsRunnable.java:57)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_timer_job' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:388)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	... 24 common frames omitted
+2018-12-27 18:23:45,151 [activiti-acquire-async-jobs-3420] ERROR org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [exception during async job acquisition: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+### The error may exist in org/activiti/db/mapping/entity/Job.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.JobEntityImpl.selectJobsToExecute-Inline
+### The error occurred while setting parameters
+### SQL: select   RES.*    from ACT_RU_JOB RES   where LOCK_EXP_TIME_ is null   LIMIT ? OFFSET ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist]
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+### The error may exist in org/activiti/db/mapping/entity/Job.xml
+### The error may involve org.activiti.engine.impl.persistence.entity.JobEntityImpl.selectJobsToExecute-Inline
+### The error occurred while setting parameters
+### SQL: select   RES.*    from ACT_RU_JOB RES   where LOCK_EXP_TIME_ is null   LIMIT ? OFFSET ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.activiti.engine.impl.db.DbSqlSession.selectListWithRawParameter(DbSqlSession.java:320)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:305)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:284)
+	at org.activiti.engine.impl.db.DbSqlSession.selectList(DbSqlSession.java:268)
+	at org.activiti.engine.impl.persistence.entity.data.impl.MybatisJobDataManager.findJobsToExecute(MybatisJobDataManager.java:56)
+	at org.activiti.engine.impl.persistence.entity.JobEntityManagerImpl.findJobsToExecute(JobEntityManagerImpl.java:88)
+	at org.activiti.engine.impl.cmd.AcquireJobsCmd.execute(AcquireJobsCmd.java:39)
+	at org.activiti.engine.impl.cmd.AcquireJobsCmd.execute(AcquireJobsCmd.java:29)
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42)
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63)
+	at org.activiti.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:47)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.activiti.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:45)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39)
+	at org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable.run(AcquireAsyncJobsDueRunnable.java:53)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'activiti.act_ru_job' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:388)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	... 23 common frames omitted
+2018-12-27 18:23:48,113 [Thread-14-3420] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e276594: startup date [Thu Dec 27 18:23:11 CST 2018]; root of context hierarchy]
+2018-12-27 18:23:48,119 [Thread-14-3420] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans on shutdown]
+2018-12-27 18:23:48,121 [Thread-14-3420] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans]
+2018-12-27 18:23:48,122 [Thread-14-3420] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Shutting down the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2018-12-27 18:23:48,123 [activiti-reset-expired-jobs-3420] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} stopped resetting expired jobs]
+2018-12-27 18:23:48,123 [activiti-acquire-timer-jobs-3420] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} stopped async job due acquisition]
+2018-12-27 18:23:48,123 [activiti-acquire-async-jobs-3420] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} stopped async job due acquisition]
+2018-12-27 18:23:48,125 [Thread-14-3420] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown initiated...]
+2018-12-27 18:23:48,133 [Thread-14-3420] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown completed.]
+2018-12-27 18:23:52,587 [main-3423] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 3423 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2018-12-27 18:23:52,630 [main-3423] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2018-12-27 18:23:52,677 [main-3423] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3ecd267f: startup date [Thu Dec 27 18:23:52 CST 2018]; root of context hierarchy]
+2018-12-27 18:23:54,024 [main-3423] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat initialized with port(s): 10011 (http)]
+2018-12-27 18:23:54,035 [main-3423] INFO  org.apache.coyote.http11.Http11NioProtocol - [Initializing ProtocolHandler ["http-nio-10011"]]
+2018-12-27 18:23:54,043 [main-3423] INFO  org.apache.catalina.core.StandardService - [Starting service [Tomcat]]
+2018-12-27 18:23:54,044 [main-3423] INFO  org.apache.catalina.core.StandardEngine - [Starting Servlet Engine: Apache Tomcat/8.5.34]
+2018-12-27 18:23:54,047 [localhost-startStop-1-3423] INFO  org.apache.catalina.core.AprLifecycleListener - [The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liuhao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]]
+2018-12-27 18:23:54,126 [localhost-startStop-1-3423] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring embedded WebApplicationContext]
+2018-12-27 18:23:54,126 [localhost-startStop-1-3423] INFO  org.springframework.web.context.ContextLoader - [Root WebApplicationContext: initialization completed in 1449 ms]
+2018-12-27 18:23:54,206 [localhost-startStop-1-3423] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - [Servlet dispatcherServlet mapped to [/]]
+2018-12-27 18:23:54,210 [localhost-startStop-1-3423] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'characterEncodingFilter' to: [/*]]
+2018-12-27 18:23:54,211 [localhost-startStop-1-3423] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]
+2018-12-27 18:23:54,211 [localhost-startStop-1-3423] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'httpPutFormContentFilter' to: [/*]]
+2018-12-27 18:23:54,211 [localhost-startStop-1-3423] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'requestContextFilter' to: [/*]]
+2018-12-27 18:23:54,587 [main-3423] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2018-12-27 18:23:54,748 [main-3423] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - [Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3ecd267f: startup date [Thu Dec 27 18:23:52 CST 2018]; root of context hierarchy]
+2018-12-27 18:23:54,797 [main-3423] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2018-12-27 18:23:54,799 [main-3423] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2018-12-27 18:23:54,840 [main-3423] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2018-12-27 18:23:54,840 [main-3423] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2018-12-27 18:23:55,027 [main-3423] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Starting...]
+2018-12-27 18:23:55,156 [main-3423] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Start completed.]
+2018-12-27 18:23:55,670 [main-3423] INFO  org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory - [Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.]
+2018-12-27 18:23:55,705 [main-3423] INFO  org.activiti.engine.impl.db.DbSqlSession - [performing create on engine with resource org/activiti/db/create/activiti.mysql.create.engine.sql]
+2018-12-27 18:23:55,706 [main-3423] INFO  org.activiti.engine.impl.db.DbSqlSession - [Found MySQL: majorVersion=5 minorVersion=7]
+2018-12-27 18:23:57,158 [main-3423] INFO  org.activiti.engine.impl.db.DbSqlSession - [performing create on history with resource org/activiti/db/create/activiti.mysql.create.history.sql]
+2018-12-27 18:23:57,159 [main-3423] INFO  org.activiti.engine.impl.db.DbSqlSession - [Found MySQL: majorVersion=5 minorVersion=7]
+2018-12-27 18:23:57,631 [main-3423] INFO  org.activiti.engine.impl.db.DbSqlSession - [performing create on identity with resource org/activiti/db/create/activiti.mysql.create.identity.sql]
+2018-12-27 18:23:57,631 [main-3423] INFO  org.activiti.engine.impl.db.DbSqlSession - [Found MySQL: majorVersion=5 minorVersion=7]
+2018-12-27 18:23:57,749 [main-3423] INFO  org.activiti.engine.impl.ProcessEngineImpl - [ProcessEngine default created]
+2018-12-27 18:23:57,750 [main-3423] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2018-12-27 18:23:57,751 [Thread-13-3423] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} starting to acquire async jobs due]
+2018-12-27 18:23:57,751 [Thread-14-3423] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} starting to acquire async jobs due]
+2018-12-27 18:23:57,752 [Thread-15-3423] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} starting to reset expired jobs]
+2018-12-27 18:23:58,035 [main-3423] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Registering beans for JMX exposure on startup]
+2018-12-27 18:23:58,036 [main-3423] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Bean with name 'dataSource' has been autodetected for JMX exposure]
+2018-12-27 18:23:58,041 [main-3423] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]]
+2018-12-27 18:23:58,050 [main-3423] INFO  org.apache.coyote.http11.Http11NioProtocol - [Starting ProtocolHandler ["http-nio-10011"]]
+2018-12-27 18:23:58,074 [main-3423] INFO  org.apache.tomcat.util.net.NioSelectorPool - [Using a shared selector for servlet write/read]
+2018-12-27 18:23:58,086 [main-3423] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat started on port(s): 10011 (http) with context path '']
+2018-12-27 18:23:58,091 [main-3423] INFO  self.activiti.ActivitiApplication - [Started ActivitiApplication in 6.179 seconds (JVM running for 7.0)]
+2018-12-27 18:25:03,407 [Thread-18-3423] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3ecd267f: startup date [Thu Dec 27 18:23:52 CST 2018]; root of context hierarchy]
+2018-12-27 18:25:03,410 [Thread-18-3423] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans on shutdown]
+2018-12-27 18:25:03,410 [Thread-18-3423] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans]
+2018-12-27 18:25:03,412 [Thread-18-3423] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Shutting down the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2018-12-27 18:25:03,412 [activiti-acquire-async-jobs-3423] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} stopped async job due acquisition]
+2018-12-27 18:25:03,413 [activiti-reset-expired-jobs-3423] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} stopped resetting expired jobs]
+2018-12-27 18:25:03,412 [activiti-acquire-timer-jobs-3423] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} stopped async job due acquisition]
+2018-12-27 18:25:03,417 [Thread-18-3423] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown initiated...]
+2018-12-27 18:25:03,426 [Thread-18-3423] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown completed.]
