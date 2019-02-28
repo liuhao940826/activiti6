@@ -28,7 +28,7 @@ public class TestController {
     }
 
     public void test(){
-        System.out.println("I will be merge ");
+        System.out.println("I will be merge featrue ");
     }
 
 }
