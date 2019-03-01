@@ -61,6 +61,7 @@
             <version>8.0.11</version>
         </dependency>
 
+        <!--包含了工作流的一些类和spring集成-->
         <dependency>
             <groupId>org.activiti</groupId>
             <artifactId>activiti-spring-boot-starter-basic</artifactId>

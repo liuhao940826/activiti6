@@ -7,7 +7,7 @@ import org.activiti.engine.repository.ProcessDefinition;
  * @Description:
  * @Date: Create in 11:07 AM 2019/1/7
  */
-public interface ActivitiService {
+public interface SelfActivitiService {
 
     void createDeployment(String resource);
 

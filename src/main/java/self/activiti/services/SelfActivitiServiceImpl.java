@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import self.activiti.services.Interfaces.ActivitiService;
+import self.activiti.services.Interfaces.SelfActivitiService;
 
 /**
  * @Author: liuhao
@@ -19,14 +19,17 @@ import self.activiti.services.Interfaces.ActivitiService;
  * @Date: Create in 11:08 AM 2019/1/7
  */
 @Service
-public class ActivitiServiceImpl implements ActivitiService, InitializingBean {
+public class SelfActivitiServiceImpl implements SelfActivitiService, InitializingBean {
 
-    private static final Logger logger = LoggerFactory.getLogger(ActivitiServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(SelfActivitiServiceImpl.class);
 
     @Autowired
     private RepositoryService repositoryService;
     @Autowired
     private RuntimeService runtimeService;
+    /**
+     * 工作流本身的taskService
+     */
     @Autowired
     private TaskService taskService;
 
@@ -75,7 +78,9 @@ public class ActivitiServiceImpl implements ActivitiService, InitializingBean {
     @Override
     public ProcessDefinition getLastDeployment(String key) {
 
-        return repositoryService.createProcessDefinitionQuery().processDefinitionKey(key).active().latestVersion().singleResult();
+        ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery().processDefinitionKey(key).active().latestVersion().singleResult();
+
+        return processDefinition;
     }
 
 

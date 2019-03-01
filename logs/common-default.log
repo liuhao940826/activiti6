@@ -21,11 +21,11 @@
 2019-02-18 14:53:47,905 [Thread-10-7302] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} starting to acquire async jobs due]
 2019-02-18 14:53:47,905 [Thread-11-7302] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} starting to acquire async jobs due]
 2019-02-18 14:53:47,905 [Thread-12-7302] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} starting to reset expired jobs]
-2019-02-18 14:53:47,936 [main-7302] INFO  self.activiti.services.ActivitiServiceImpl - [spring容器初始化bean执行方法:self.activiti.services.ActivitiServiceImpl]
-2019-02-18 14:53:47,936 [main-7302] INFO  self.activiti.services.ActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,开始]
-2019-02-18 14:53:48,268 [main-7302] INFO  self.activiti.services.ActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,结束 部署Id:12501,部署名字:null]
-2019-02-18 14:53:48,268 [main-7302] INFO  self.activiti.services.ActivitiServiceImpl - [创建 Activiti 流程实例:keyfinancialReport,开始]
-2019-02-18 14:53:48,326 [main-7302] INFO  self.activiti.services.ActivitiServiceImpl - [创建 Activiti 流程实例:keyfinancialReport,结束]
+2019-02-18 14:53:47,936 [main-7302] INFO  SelfActivitiServiceImpl - [spring容器初始化bean执行方法:SelfActivitiServiceImpl]
+2019-02-18 14:53:47,936 [main-7302] INFO  SelfActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,开始]
+2019-02-18 14:53:48,268 [main-7302] INFO  SelfActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,结束 部署Id:12501,部署名字:null]
+2019-02-18 14:53:48,268 [main-7302] INFO  SelfActivitiServiceImpl - [创建 Activiti 流程实例:keyfinancialReport,开始]
+2019-02-18 14:53:48,326 [main-7302] INFO  SelfActivitiServiceImpl - [创建 Activiti 流程实例:keyfinancialReport,结束]
 2019-02-18 14:53:48,451 [main-7302] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
 2019-02-18 14:53:48,658 [main-7302] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - [Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77d2e85: startup date [Mon Feb 18 14:53:45 CST 2019]; root of context hierarchy]
 2019-02-18 14:53:48,721 [main-7302] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/start]}" onto public void self.activiti.controller.TestController.startProcessInstance()]
@@ -50,3 +50,427 @@
 2019-02-18 14:57:42,246 [activiti-acquire-timer-jobs-7302] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} stopped async job due acquisition]
 2019-02-18 14:57:42,248 [Thread-16-7302] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown initiated...]
 2019-02-18 14:57:42,253 [Thread-16-7302] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown completed.]
+2019-03-01 12:00:53,562 [main-74901] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 74901 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2019-03-01 12:00:53,567 [main-74901] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2019-03-01 12:00:53,640 [main-74901] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a76840c: startup date [Fri Mar 01 12:00:53 CST 2019]; root of context hierarchy]
+2019-03-01 12:00:54,155 [main-74901] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - [No MyBatis mapper was found in '[self.activiti.dao]' package. Please check your configuration.]
+2019-03-01 12:00:54,325 [main-74901] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - [No MyBatis mapper was found in '[self.activiti]' package. Please check your configuration.]
+2019-03-01 12:00:54,688 [main-74901] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat': Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'datasourceConfig': Unsatisfied dependency expressed through field 'mapperLocations'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist]
+2019-03-01 12:00:54,695 [main-74901] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.]
+2019-03-01 12:00:54,706 [main-74901] ERROR org.springframework.boot.SpringApplication - [Application run failed]
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat': Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'datasourceConfig': Unsatisfied dependency expressed through field 'mapperLocations'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
+	at self.activiti.ActivitiApplication.main(ActivitiApplication.java:11)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat': Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'datasourceConfig': Unsatisfied dependency expressed through field 'mapperLocations'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:214)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:178)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:152)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'datasourceConfig': Unsatisfied dependency expressed through field 'mapperLocations'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:664)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:94)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'datasourceConfig': Unsatisfied dependency expressed through field 'mapperLocations'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 52 common frames omitted
+Caused by: org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'org.springframework.core.io.Resource[]'; nested exception is java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist
+	at org.springframework.beans.TypeConverterSupport.doConvert(TypeConverterSupport.java:80)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:60)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1089)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:581)
+	... 68 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve resource location pattern [classpath:bean/mybatis/mapping/*.xml]: class path resource [bean/mybatis/mapping/] cannot be resolved to URL because it does not exist
+	at org.springframework.core.io.support.ResourceArrayPropertyEditor.setAsText(ResourceArrayPropertyEditor.java:120)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:466)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:439)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:192)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:117)
+	at org.springframework.beans.TypeConverterSupport.doConvert(TypeConverterSupport.java:70)
+	... 72 common frames omitted
+2019-03-01 12:03:45,491 [main-74957] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 74957 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2019-03-01 12:03:45,494 [main-74957] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2019-03-01 12:03:45,537 [main-74957] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4b6690c0: startup date [Fri Mar 01 12:03:45 CST 2019]; root of context hierarchy]
+2019-03-01 12:03:46,867 [main-74957] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat initialized with port(s): 10011 (http)]
+2019-03-01 12:03:46,891 [main-74957] INFO  org.apache.coyote.http11.Http11NioProtocol - [Initializing ProtocolHandler ["http-nio-10011"]]
+2019-03-01 12:03:46,904 [main-74957] INFO  org.apache.catalina.core.StandardService - [Starting service [Tomcat]]
+2019-03-01 12:03:46,904 [main-74957] INFO  org.apache.catalina.core.StandardEngine - [Starting Servlet Engine: Apache Tomcat/8.5.34]
+2019-03-01 12:03:46,908 [localhost-startStop-1-74957] INFO  org.apache.catalina.core.AprLifecycleListener - [The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liuhao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]]
+2019-03-01 12:03:47,002 [localhost-startStop-1-74957] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring embedded WebApplicationContext]
+2019-03-01 12:03:47,002 [localhost-startStop-1-74957] INFO  org.springframework.web.context.ContextLoader - [Root WebApplicationContext: initialization completed in 1465 ms]
+2019-03-01 12:03:47,089 [localhost-startStop-1-74957] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - [Servlet dispatcherServlet mapped to [/]]
+2019-03-01 12:03:47,098 [localhost-startStop-1-74957] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'characterEncodingFilter' to: [/*]]
+2019-03-01 12:03:47,099 [localhost-startStop-1-74957] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]
+2019-03-01 12:03:47,100 [localhost-startStop-1-74957] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'httpPutFormContentFilter' to: [/*]]
+2019-03-01 12:03:47,101 [localhost-startStop-1-74957] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'requestContextFilter' to: [/*]]
+2019-03-01 12:03:47,649 [main-74957] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Starting...]
+2019-03-01 12:03:47,896 [main-74957] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Start completed.]
+2019-03-01 12:03:48,652 [main-74957] INFO  org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory - [Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.]
+2019-03-01 12:03:48,704 [main-74957] INFO  org.activiti.engine.impl.db.DbSqlSession - [performing create on engine with resource org/activiti/db/create/activiti.mysql.create.engine.sql]
+2019-03-01 12:03:48,705 [main-74957] INFO  org.activiti.engine.impl.db.DbSqlSession - [Found MySQL: majorVersion=5 minorVersion=7]
+2019-03-01 12:03:50,260 [main-74957] INFO  org.activiti.engine.impl.db.DbSqlSession - [performing create on history with resource org/activiti/db/create/activiti.mysql.create.history.sql]
+2019-03-01 12:03:50,261 [main-74957] INFO  org.activiti.engine.impl.db.DbSqlSession - [Found MySQL: majorVersion=5 minorVersion=7]
+2019-03-01 12:03:50,744 [main-74957] INFO  org.activiti.engine.impl.db.DbSqlSession - [performing create on identity with resource org/activiti/db/create/activiti.mysql.create.identity.sql]
+2019-03-01 12:03:50,745 [main-74957] INFO  org.activiti.engine.impl.db.DbSqlSession - [Found MySQL: majorVersion=5 minorVersion=7]
+2019-03-01 12:03:50,867 [main-74957] INFO  org.activiti.engine.impl.ProcessEngineImpl - [ProcessEngine default created]
+2019-03-01 12:03:50,868 [main-74957] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2019-03-01 12:03:50,869 [Thread-15-74957] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} starting to acquire async jobs due]
+2019-03-01 12:03:50,869 [Thread-16-74957] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} starting to acquire async jobs due]
+2019-03-01 12:03:50,869 [Thread-17-74957] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} starting to reset expired jobs]
+2019-03-01 12:03:50,945 [main-74957] INFO  self.activiti.services.SelfActivitiServiceImpl - [spring容器初始化bean执行方法:self.activiti.services.SelfActivitiServiceImpl]
+2019-03-01 12:03:50,945 [main-74957] INFO  self.activiti.services.SelfActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,开始]
+2019-03-01 12:03:51,184 [main-74957] INFO  self.activiti.services.SelfActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,结束 部署Id:1,部署名字:null]
+2019-03-01 12:03:51,321 [main-74957] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 12:03:51,518 [main-74957] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - [Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4b6690c0: startup date [Fri Mar 01 12:03:45 CST 2019]; root of context hierarchy]
+2019-03-01 12:03:51,581 [main-74957] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/start]}" onto public void self.activiti.controller.TestController.startProcessInstance()]
+2019-03-01 12:03:51,586 [main-74957] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2019-03-01 12:03:51,586 [main-74957] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2019-03-01 12:03:51,607 [main-74957] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping - [Mapped URL path [/activiti] onto handler '/activiti']
+2019-03-01 12:03:51,612 [main-74957] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 12:03:51,612 [main-74957] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 12:03:51,879 [main-74957] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Registering beans for JMX exposure on startup]
+2019-03-01 12:03:51,880 [main-74957] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Bean with name 'dataSource' has been autodetected for JMX exposure]
+2019-03-01 12:03:51,886 [main-74957] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]]
+2019-03-01 12:03:51,898 [main-74957] INFO  org.apache.coyote.http11.Http11NioProtocol - [Starting ProtocolHandler ["http-nio-10011"]]
+2019-03-01 12:03:51,927 [main-74957] INFO  org.apache.tomcat.util.net.NioSelectorPool - [Using a shared selector for servlet write/read]
+2019-03-01 12:03:51,944 [main-74957] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat started on port(s): 10011 (http) with context path '']
+2019-03-01 12:03:51,949 [main-74957] INFO  self.activiti.ActivitiApplication - [Started ActivitiApplication in 7.203 seconds (JVM running for 8.0)]
+2019-03-01 12:04:39,667 [http-nio-10011-exec-2-74957] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring FrameworkServlet 'dispatcherServlet']
+2019-03-01 12:04:39,668 [http-nio-10011-exec-2-74957] INFO  org.springframework.web.servlet.DispatcherServlet - [FrameworkServlet 'dispatcherServlet': initialization started]
+2019-03-01 12:04:39,687 [http-nio-10011-exec-2-74957] INFO  org.springframework.web.servlet.DispatcherServlet - [FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms]
+2019-03-01 13:34:43,955 [activiti housekeeper-74957] WARN  com.zaxxer.hikari.pool.HikariPool - [activiti - Thread starvation or clock leap detected (housekeeper delta=1m25s123ms).]
+2019-03-01 13:52:41,187 [activiti housekeeper-74957] WARN  com.zaxxer.hikari.pool.HikariPool - [activiti - Thread starvation or clock leap detected (housekeeper delta=11m27s192ms).]
+2019-03-01 14:01:49,577 [Thread-21-74957] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4b6690c0: startup date [Fri Mar 01 12:03:45 CST 2019]; root of context hierarchy]
+2019-03-01 14:01:49,582 [Thread-21-74957] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans on shutdown]
+2019-03-01 14:01:49,583 [Thread-21-74957] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans]
+2019-03-01 14:01:49,587 [Thread-21-74957] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Shutting down the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2019-03-01 14:01:49,588 [activiti-reset-expired-jobs-74957] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} stopped resetting expired jobs]
+2019-03-01 14:01:49,588 [activiti-acquire-async-jobs-74957] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} stopped async job due acquisition]
+2019-03-01 14:01:49,588 [activiti-acquire-timer-jobs-74957] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} stopped async job due acquisition]
+2019-03-01 14:01:49,590 [Thread-21-74957] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown initiated...]
+2019-03-01 14:01:49,599 [Thread-21-74957] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown completed.]
+2019-03-01 14:01:57,074 [main-76355] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 76355 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2019-03-01 14:01:57,078 [main-76355] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2019-03-01 14:01:57,174 [main-76355] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@39fcbef6: startup date [Fri Mar 01 14:01:57 CST 2019]; root of context hierarchy]
+2019-03-01 14:01:59,047 [main-76355] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat initialized with port(s): 10011 (http)]
+2019-03-01 14:01:59,060 [main-76355] INFO  org.apache.coyote.http11.Http11NioProtocol - [Initializing ProtocolHandler ["http-nio-10011"]]
+2019-03-01 14:01:59,069 [main-76355] INFO  org.apache.catalina.core.StandardService - [Starting service [Tomcat]]
+2019-03-01 14:01:59,070 [main-76355] INFO  org.apache.catalina.core.StandardEngine - [Starting Servlet Engine: Apache Tomcat/8.5.34]
+2019-03-01 14:01:59,075 [localhost-startStop-1-76355] INFO  org.apache.catalina.core.AprLifecycleListener - [The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liuhao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]]
+2019-03-01 14:01:59,186 [localhost-startStop-1-76355] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring embedded WebApplicationContext]
+2019-03-01 14:01:59,186 [localhost-startStop-1-76355] INFO  org.springframework.web.context.ContextLoader - [Root WebApplicationContext: initialization completed in 2013 ms]
+2019-03-01 14:01:59,290 [localhost-startStop-1-76355] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - [Servlet dispatcherServlet mapped to [/]]
+2019-03-01 14:01:59,294 [localhost-startStop-1-76355] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'characterEncodingFilter' to: [/*]]
+2019-03-01 14:01:59,294 [localhost-startStop-1-76355] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]
+2019-03-01 14:01:59,294 [localhost-startStop-1-76355] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'httpPutFormContentFilter' to: [/*]]
+2019-03-01 14:01:59,294 [localhost-startStop-1-76355] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'requestContextFilter' to: [/*]]
+2019-03-01 14:02:00,370 [main-76355] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Starting...]
+2019-03-01 14:02:00,568 [main-76355] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Start completed.]
+2019-03-01 14:02:01,330 [main-76355] INFO  org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory - [Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.]
+2019-03-01 14:02:01,445 [main-76355] INFO  org.activiti.engine.impl.ProcessEngineImpl - [ProcessEngine default created]
+2019-03-01 14:02:01,446 [main-76355] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2019-03-01 14:02:01,447 [Thread-12-76355] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} starting to acquire async jobs due]
+2019-03-01 14:02:01,447 [Thread-11-76355] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} starting to acquire async jobs due]
+2019-03-01 14:02:01,447 [Thread-13-76355] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} starting to reset expired jobs]
+2019-03-01 14:02:01,480 [main-76355] INFO  self.activiti.services.SelfActivitiServiceImpl - [spring容器初始化bean执行方法:self.activiti.services.SelfActivitiServiceImpl]
+2019-03-01 14:02:01,480 [main-76355] INFO  self.activiti.services.SelfActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,开始]
+2019-03-01 14:02:01,725 [main-76355] INFO  self.activiti.services.SelfActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,结束 部署Id:2501,部署名字:null]
+2019-03-01 14:02:01,870 [main-76355] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:02:02,066 [main-76355] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - [Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@39fcbef6: startup date [Fri Mar 01 14:01:57 CST 2019]; root of context hierarchy]
+2019-03-01 14:02:02,111 [main-76355] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/start]}" onto public void self.activiti.controller.TestController.startProcessInstance()]
+2019-03-01 14:02:02,115 [main-76355] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2019-03-01 14:02:02,115 [main-76355] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2019-03-01 14:02:02,133 [main-76355] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping - [Mapped URL path [/activiti] onto handler '/activiti']
+2019-03-01 14:02:02,139 [main-76355] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:02:02,139 [main-76355] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:02:02,413 [main-76355] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Registering beans for JMX exposure on startup]
+2019-03-01 14:02:02,414 [main-76355] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Bean with name 'dataSource' has been autodetected for JMX exposure]
+2019-03-01 14:02:02,420 [main-76355] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]]
+2019-03-01 14:02:02,435 [main-76355] INFO  org.apache.coyote.http11.Http11NioProtocol - [Starting ProtocolHandler ["http-nio-10011"]]
+2019-03-01 14:02:02,459 [main-76355] INFO  org.apache.tomcat.util.net.NioSelectorPool - [Using a shared selector for servlet write/read]
+2019-03-01 14:02:02,473 [main-76355] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat started on port(s): 10011 (http) with context path '']
+2019-03-01 14:02:02,477 [main-76355] INFO  self.activiti.ActivitiApplication - [Started ActivitiApplication in 6.01 seconds (JVM running for 6.8)]
+2019-03-01 14:03:31,357 [Thread-17-76355] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@39fcbef6: startup date [Fri Mar 01 14:01:57 CST 2019]; root of context hierarchy]
+2019-03-01 14:03:31,361 [Thread-17-76355] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans on shutdown]
+2019-03-01 14:03:31,364 [Thread-17-76355] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans]
+2019-03-01 14:03:31,369 [Thread-17-76355] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Shutting down the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2019-03-01 14:03:31,369 [activiti-acquire-async-jobs-76355] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} stopped async job due acquisition]
+2019-03-01 14:03:31,369 [activiti-reset-expired-jobs-76355] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} stopped resetting expired jobs]
+2019-03-01 14:03:31,369 [activiti-acquire-timer-jobs-76355] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} stopped async job due acquisition]
+2019-03-01 14:03:31,372 [Thread-17-76355] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown initiated...]
+2019-03-01 14:03:31,384 [Thread-17-76355] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown completed.]
+2019-03-01 14:06:46,763 [main-76434] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 76434 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2019-03-01 14:06:46,766 [main-76434] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2019-03-01 14:06:46,830 [main-76434] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77d2e85: startup date [Fri Mar 01 14:06:46 CST 2019]; root of context hierarchy]
+2019-03-01 14:06:48,008 [main-76434] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat initialized with port(s): 10011 (http)]
+2019-03-01 14:06:48,017 [main-76434] INFO  org.apache.coyote.http11.Http11NioProtocol - [Initializing ProtocolHandler ["http-nio-10011"]]
+2019-03-01 14:06:48,030 [main-76434] INFO  org.apache.catalina.core.StandardService - [Starting service [Tomcat]]
+2019-03-01 14:06:48,031 [main-76434] INFO  org.apache.catalina.core.StandardEngine - [Starting Servlet Engine: Apache Tomcat/8.5.34]
+2019-03-01 14:06:48,035 [localhost-startStop-1-76434] INFO  org.apache.catalina.core.AprLifecycleListener - [The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liuhao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]]
+2019-03-01 14:06:48,106 [localhost-startStop-1-76434] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring embedded WebApplicationContext]
+2019-03-01 14:06:48,106 [localhost-startStop-1-76434] INFO  org.springframework.web.context.ContextLoader - [Root WebApplicationContext: initialization completed in 1277 ms]
+2019-03-01 14:06:48,178 [localhost-startStop-1-76434] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - [Servlet dispatcherServlet mapped to [/]]
+2019-03-01 14:06:48,182 [localhost-startStop-1-76434] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'characterEncodingFilter' to: [/*]]
+2019-03-01 14:06:48,183 [localhost-startStop-1-76434] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]
+2019-03-01 14:06:48,183 [localhost-startStop-1-76434] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'httpPutFormContentFilter' to: [/*]]
+2019-03-01 14:06:48,183 [localhost-startStop-1-76434] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'requestContextFilter' to: [/*]]
+2019-03-01 14:06:48,424 [main-76434] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Starting...]
+2019-03-01 14:06:48,591 [main-76434] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Start completed.]
+2019-03-01 14:06:49,242 [main-76434] INFO  org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory - [Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.]
+2019-03-01 14:06:49,324 [main-76434] INFO  org.activiti.engine.impl.ProcessEngineImpl - [ProcessEngine default created]
+2019-03-01 14:06:49,326 [main-76434] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2019-03-01 14:06:49,327 [Thread-8-76434] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} starting to acquire async jobs due]
+2019-03-01 14:06:49,327 [Thread-9-76434] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} starting to acquire async jobs due]
+2019-03-01 14:06:49,327 [Thread-10-76434] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} starting to reset expired jobs]
+2019-03-01 14:06:49,362 [main-76434] INFO  self.activiti.services.SelfActivitiServiceImpl - [spring容器初始化bean执行方法:self.activiti.services.SelfActivitiServiceImpl]
+2019-03-01 14:06:49,362 [main-76434] INFO  self.activiti.services.SelfActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,开始]
+2019-03-01 14:06:49,602 [main-76434] INFO  self.activiti.services.SelfActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,结束 部署Id:5001,部署名字:null]
+2019-03-01 14:06:49,725 [main-76434] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:06:49,907 [main-76434] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - [Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77d2e85: startup date [Fri Mar 01 14:06:46 CST 2019]; root of context hierarchy]
+2019-03-01 14:06:49,960 [main-76434] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/start]}" onto public void self.activiti.controller.TestController.startProcessInstance()]
+2019-03-01 14:06:49,964 [main-76434] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2019-03-01 14:06:49,965 [main-76434] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2019-03-01 14:06:49,983 [main-76434] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping - [Mapped URL path [/activiti] onto handler '/activiti']
+2019-03-01 14:06:49,990 [main-76434] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:06:49,990 [main-76434] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:06:50,275 [main-76434] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Registering beans for JMX exposure on startup]
+2019-03-01 14:06:50,276 [main-76434] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Bean with name 'dataSource' has been autodetected for JMX exposure]
+2019-03-01 14:06:50,282 [main-76434] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]]
+2019-03-01 14:06:50,291 [main-76434] INFO  org.apache.coyote.http11.Http11NioProtocol - [Starting ProtocolHandler ["http-nio-10011"]]
+2019-03-01 14:06:50,322 [main-76434] INFO  org.apache.tomcat.util.net.NioSelectorPool - [Using a shared selector for servlet write/read]
+2019-03-01 14:06:50,340 [main-76434] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat started on port(s): 10011 (http) with context path '']
+2019-03-01 14:06:50,345 [main-76434] INFO  self.activiti.ActivitiApplication - [Started ActivitiApplication in 4.3 seconds (JVM running for 5.058)]
+2019-03-01 14:07:16,423 [Thread-14-76434] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77d2e85: startup date [Fri Mar 01 14:06:46 CST 2019]; root of context hierarchy]
+2019-03-01 14:07:16,425 [Thread-14-76434] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans on shutdown]
+2019-03-01 14:07:16,426 [Thread-14-76434] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans]
+2019-03-01 14:07:16,429 [Thread-14-76434] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Shutting down the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2019-03-01 14:07:16,430 [activiti-acquire-timer-jobs-76434] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} stopped async job due acquisition]
+2019-03-01 14:07:16,430 [activiti-reset-expired-jobs-76434] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} stopped resetting expired jobs]
+2019-03-01 14:07:16,430 [activiti-acquire-async-jobs-76434] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} stopped async job due acquisition]
+2019-03-01 14:07:16,432 [Thread-14-76434] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown initiated...]
+2019-03-01 14:07:16,442 [Thread-14-76434] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown completed.]
+2019-03-01 14:07:26,158 [main-76447] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 76447 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2019-03-01 14:07:26,207 [main-76447] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2019-03-01 14:07:26,253 [main-76447] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@73173f63: startup date [Fri Mar 01 14:07:26 CST 2019]; root of context hierarchy]
+2019-03-01 14:07:27,455 [main-76447] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat initialized with port(s): 10011 (http)]
+2019-03-01 14:07:27,467 [main-76447] INFO  org.apache.coyote.http11.Http11NioProtocol - [Initializing ProtocolHandler ["http-nio-10011"]]
+2019-03-01 14:07:27,475 [main-76447] INFO  org.apache.catalina.core.StandardService - [Starting service [Tomcat]]
+2019-03-01 14:07:27,475 [main-76447] INFO  org.apache.catalina.core.StandardEngine - [Starting Servlet Engine: Apache Tomcat/8.5.34]
+2019-03-01 14:07:27,479 [localhost-startStop-1-76447] INFO  org.apache.catalina.core.AprLifecycleListener - [The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liuhao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]]
+2019-03-01 14:07:27,560 [localhost-startStop-1-76447] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring embedded WebApplicationContext]
+2019-03-01 14:07:27,560 [localhost-startStop-1-76447] INFO  org.springframework.web.context.ContextLoader - [Root WebApplicationContext: initialization completed in 1307 ms]
+2019-03-01 14:07:27,637 [localhost-startStop-1-76447] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - [Servlet dispatcherServlet mapped to [/]]
+2019-03-01 14:07:27,641 [localhost-startStop-1-76447] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'characterEncodingFilter' to: [/*]]
+2019-03-01 14:07:27,642 [localhost-startStop-1-76447] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]
+2019-03-01 14:07:27,642 [localhost-startStop-1-76447] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'httpPutFormContentFilter' to: [/*]]
+2019-03-01 14:07:27,642 [localhost-startStop-1-76447] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'requestContextFilter' to: [/*]]
+2019-03-01 14:07:27,879 [main-76447] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Starting...]
+2019-03-01 14:07:28,075 [main-76447] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Start completed.]
+2019-03-01 14:07:28,780 [main-76447] INFO  org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory - [Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.]
+2019-03-01 14:07:28,857 [main-76447] INFO  org.activiti.engine.impl.ProcessEngineImpl - [ProcessEngine default created]
+2019-03-01 14:07:28,858 [main-76447] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2019-03-01 14:07:28,858 [Thread-9-76447] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} starting to acquire async jobs due]
+2019-03-01 14:07:28,858 [Thread-10-76447] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} starting to acquire async jobs due]
+2019-03-01 14:07:28,858 [Thread-11-76447] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} starting to reset expired jobs]
+2019-03-01 14:07:28,887 [main-76447] INFO  self.activiti.services.SelfActivitiServiceImpl - [spring容器初始化bean执行方法:self.activiti.services.SelfActivitiServiceImpl]
+2019-03-01 14:07:29,210 [main-76447] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:07:29,384 [main-76447] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - [Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@73173f63: startup date [Fri Mar 01 14:07:26 CST 2019]; root of context hierarchy]
+2019-03-01 14:07:29,449 [main-76447] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/start]}" onto public void self.activiti.controller.TestController.startProcessInstance()]
+2019-03-01 14:07:29,454 [main-76447] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2019-03-01 14:07:29,454 [main-76447] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2019-03-01 14:07:29,477 [main-76447] INFO  org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping - [Mapped URL path [/activiti] onto handler '/activiti']
+2019-03-01 14:07:29,484 [main-76447] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:07:29,484 [main-76447] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:07:29,749 [main-76447] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Registering beans for JMX exposure on startup]
+2019-03-01 14:07:29,750 [main-76447] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Bean with name 'dataSource' has been autodetected for JMX exposure]
+2019-03-01 14:07:29,757 [main-76447] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]]
+2019-03-01 14:07:29,767 [main-76447] INFO  org.apache.coyote.http11.Http11NioProtocol - [Starting ProtocolHandler ["http-nio-10011"]]
+2019-03-01 14:07:29,791 [main-76447] INFO  org.apache.tomcat.util.net.NioSelectorPool - [Using a shared selector for servlet write/read]
+2019-03-01 14:07:29,803 [main-76447] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat started on port(s): 10011 (http) with context path '']
+2019-03-01 14:07:29,807 [main-76447] INFO  self.activiti.ActivitiApplication - [Started ActivitiApplication in 4.304 seconds (JVM running for 5.209)]
+2019-03-01 14:07:46,322 [http-nio-10011-exec-2-76447] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring FrameworkServlet 'dispatcherServlet']
+2019-03-01 14:07:46,322 [http-nio-10011-exec-2-76447] INFO  org.springframework.web.servlet.DispatcherServlet - [FrameworkServlet 'dispatcherServlet': initialization started]
+2019-03-01 14:07:46,340 [http-nio-10011-exec-2-76447] INFO  org.springframework.web.servlet.DispatcherServlet - [FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms]
+2019-03-01 14:09:24,184 [Thread-15-76447] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@73173f63: startup date [Fri Mar 01 14:07:26 CST 2019]; root of context hierarchy]
+2019-03-01 14:09:24,197 [Thread-15-76447] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans on shutdown]
+2019-03-01 14:09:24,198 [Thread-15-76447] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans]
+2019-03-01 14:09:24,200 [Thread-15-76447] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Shutting down the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2019-03-01 14:09:24,200 [activiti-acquire-async-jobs-76447] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} stopped async job due acquisition]
+2019-03-01 14:09:24,200 [activiti-acquire-timer-jobs-76447] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} stopped async job due acquisition]
+2019-03-01 14:09:24,200 [activiti-reset-expired-jobs-76447] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} stopped resetting expired jobs]
+2019-03-01 14:09:24,202 [Thread-15-76447] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown initiated...]
+2019-03-01 14:09:24,209 [Thread-15-76447] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown completed.]
+2019-03-01 14:11:31,802 [main-76514] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 76514 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2019-03-01 14:11:31,806 [main-76514] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2019-03-01 14:11:31,855 [main-76514] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1852a3ff: startup date [Fri Mar 01 14:11:31 CST 2019]; root of context hierarchy]
+2019-03-01 14:11:33,083 [main-76514] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat initialized with port(s): 10011 (http)]
+2019-03-01 14:11:33,093 [main-76514] INFO  org.apache.coyote.http11.Http11NioProtocol - [Initializing ProtocolHandler ["http-nio-10011"]]
+2019-03-01 14:11:33,102 [main-76514] INFO  org.apache.catalina.core.StandardService - [Starting service [Tomcat]]
+2019-03-01 14:11:33,102 [main-76514] INFO  org.apache.catalina.core.StandardEngine - [Starting Servlet Engine: Apache Tomcat/8.5.34]
+2019-03-01 14:11:33,106 [localhost-startStop-1-76514] INFO  org.apache.catalina.core.AprLifecycleListener - [The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liuhao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]]
+2019-03-01 14:11:33,179 [localhost-startStop-1-76514] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring embedded WebApplicationContext]
+2019-03-01 14:11:33,179 [localhost-startStop-1-76514] INFO  org.springframework.web.context.ContextLoader - [Root WebApplicationContext: initialization completed in 1324 ms]
+2019-03-01 14:11:33,253 [localhost-startStop-1-76514] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - [Servlet dispatcherServlet mapped to [/]]
+2019-03-01 14:11:33,260 [localhost-startStop-1-76514] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'characterEncodingFilter' to: [/*]]
+2019-03-01 14:11:33,260 [localhost-startStop-1-76514] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]
+2019-03-01 14:11:33,260 [localhost-startStop-1-76514] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'httpPutFormContentFilter' to: [/*]]
+2019-03-01 14:11:33,260 [localhost-startStop-1-76514] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'requestContextFilter' to: [/*]]
+2019-03-01 14:11:33,465 [main-76514] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Starting...]
+2019-03-01 14:11:33,627 [main-76514] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Start completed.]
+2019-03-01 14:11:34,204 [main-76514] INFO  org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory - [Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.]
+2019-03-01 14:11:34,286 [main-76514] INFO  org.activiti.engine.impl.ProcessEngineImpl - [ProcessEngine default created]
+2019-03-01 14:11:34,287 [main-76514] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2019-03-01 14:11:34,288 [Thread-9-76514] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} starting to acquire async jobs due]
+2019-03-01 14:11:34,288 [Thread-8-76514] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} starting to acquire async jobs due]
+2019-03-01 14:11:34,288 [Thread-10-76514] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} starting to reset expired jobs]
+2019-03-01 14:11:34,317 [main-76514] INFO  self.activiti.services.SelfActivitiServiceImpl - [spring容器初始化bean执行方法:self.activiti.services.SelfActivitiServiceImpl]
+2019-03-01 14:11:34,317 [main-76514] INFO  self.activiti.services.SelfActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,开始]
+2019-03-01 14:11:34,543 [main-76514] INFO  self.activiti.services.SelfActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,结束 部署Id:7501,部署名字:null]
+2019-03-01 14:11:34,671 [main-76514] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:11:34,837 [main-76514] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - [Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1852a3ff: startup date [Fri Mar 01 14:11:31 CST 2019]; root of context hierarchy]
+2019-03-01 14:11:34,883 [main-76514] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/activiti/start]}" onto public void self.activiti.controller.TestController.startProcessInstance()]
+2019-03-01 14:11:34,887 [main-76514] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2019-03-01 14:11:34,887 [main-76514] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2019-03-01 14:11:34,913 [main-76514] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:11:34,913 [main-76514] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:11:35,149 [main-76514] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Registering beans for JMX exposure on startup]
+2019-03-01 14:11:35,150 [main-76514] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Bean with name 'dataSource' has been autodetected for JMX exposure]
+2019-03-01 14:11:35,155 [main-76514] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]]
+2019-03-01 14:11:35,164 [main-76514] INFO  org.apache.coyote.http11.Http11NioProtocol - [Starting ProtocolHandler ["http-nio-10011"]]
+2019-03-01 14:11:35,188 [main-76514] INFO  org.apache.tomcat.util.net.NioSelectorPool - [Using a shared selector for servlet write/read]
+2019-03-01 14:11:35,200 [main-76514] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat started on port(s): 10011 (http) with context path '']
+2019-03-01 14:11:35,204 [main-76514] INFO  self.activiti.ActivitiApplication - [Started ActivitiApplication in 4.059 seconds (JVM running for 4.983)]
+2019-03-01 14:12:08,100 [http-nio-10011-exec-2-76514] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring FrameworkServlet 'dispatcherServlet']
+2019-03-01 14:12:08,100 [http-nio-10011-exec-2-76514] INFO  org.springframework.web.servlet.DispatcherServlet - [FrameworkServlet 'dispatcherServlet': initialization started]
+2019-03-01 14:12:08,117 [http-nio-10011-exec-2-76514] INFO  org.springframework.web.servlet.DispatcherServlet - [FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms]
+2019-03-01 14:12:08,137 [http-nio-10011-exec-2-76514] INFO  self.activiti.services.SelfActivitiServiceImpl - [创建 Activiti 流程实例:keyfinancialReport,开始]
+2019-03-01 14:12:08,190 [http-nio-10011-exec-2-76514] INFO  self.activiti.services.SelfActivitiServiceImpl - [创建 Activiti 流程实例:keyfinancialReport,结束]
+2019-03-01 14:14:14,608 [Thread-14-76514] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1852a3ff: startup date [Fri Mar 01 14:11:31 CST 2019]; root of context hierarchy]
+2019-03-01 14:14:14,610 [Thread-14-76514] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans on shutdown]
+2019-03-01 14:14:14,611 [Thread-14-76514] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans]
+2019-03-01 14:14:14,614 [Thread-14-76514] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Shutting down the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2019-03-01 14:14:14,615 [activiti-reset-expired-jobs-76514] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} stopped resetting expired jobs]
+2019-03-01 14:14:14,615 [activiti-acquire-timer-jobs-76514] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} stopped async job due acquisition]
+2019-03-01 14:14:14,615 [activiti-acquire-async-jobs-76514] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} stopped async job due acquisition]
+2019-03-01 14:14:14,617 [Thread-14-76514] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown initiated...]
+2019-03-01 14:14:14,623 [Thread-14-76514] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown completed.]
+2019-03-01 14:15:10,919 [main-76569] INFO  self.activiti.ActivitiApplication - [Starting ActivitiApplication on liuhaodeMacBook-Pro.local with PID 76569 (/Users/liuhao/IdeaProjects/activiti/target/classes started by liuhao in /Users/liuhao/IdeaProjects/activiti)]
+2019-03-01 14:15:10,923 [main-76569] INFO  self.activiti.ActivitiApplication - [The following profiles are active: dev]
+2019-03-01 14:15:10,985 [main-76569] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7c1e2a2d: startup date [Fri Mar 01 14:15:10 CST 2019]; root of context hierarchy]
+2019-03-01 14:15:12,275 [main-76569] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat initialized with port(s): 10011 (http)]
+2019-03-01 14:15:12,285 [main-76569] INFO  org.apache.coyote.http11.Http11NioProtocol - [Initializing ProtocolHandler ["http-nio-10011"]]
+2019-03-01 14:15:12,292 [main-76569] INFO  org.apache.catalina.core.StandardService - [Starting service [Tomcat]]
+2019-03-01 14:15:12,292 [main-76569] INFO  org.apache.catalina.core.StandardEngine - [Starting Servlet Engine: Apache Tomcat/8.5.34]
+2019-03-01 14:15:12,296 [localhost-startStop-1-76569] INFO  org.apache.catalina.core.AprLifecycleListener - [The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liuhao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]]
+2019-03-01 14:15:12,379 [localhost-startStop-1-76569] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring embedded WebApplicationContext]
+2019-03-01 14:15:12,379 [localhost-startStop-1-76569] INFO  org.springframework.web.context.ContextLoader - [Root WebApplicationContext: initialization completed in 1394 ms]
+2019-03-01 14:15:12,453 [localhost-startStop-1-76569] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - [Servlet dispatcherServlet mapped to [/]]
+2019-03-01 14:15:12,457 [localhost-startStop-1-76569] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'characterEncodingFilter' to: [/*]]
+2019-03-01 14:15:12,457 [localhost-startStop-1-76569] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'hiddenHttpMethodFilter' to: [/*]]
+2019-03-01 14:15:12,457 [localhost-startStop-1-76569] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'httpPutFormContentFilter' to: [/*]]
+2019-03-01 14:15:12,457 [localhost-startStop-1-76569] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - [Mapping filter: 'requestContextFilter' to: [/*]]
+2019-03-01 14:15:12,704 [main-76569] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Starting...]
+2019-03-01 14:15:12,875 [main-76569] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Start completed.]
+2019-03-01 14:15:13,491 [main-76569] INFO  org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory - [Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.]
+2019-03-01 14:15:13,557 [main-76569] INFO  org.activiti.engine.impl.ProcessEngineImpl - [ProcessEngine default created]
+2019-03-01 14:15:13,558 [main-76569] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2019-03-01 14:15:13,559 [Thread-9-76569] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} starting to acquire async jobs due]
+2019-03-01 14:15:13,559 [Thread-10-76569] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} starting to acquire async jobs due]
+2019-03-01 14:15:13,559 [Thread-11-76569] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} starting to reset expired jobs]
+2019-03-01 14:15:13,586 [main-76569] INFO  self.activiti.services.SelfActivitiServiceImpl - [spring容器初始化bean执行方法:self.activiti.services.SelfActivitiServiceImpl]
+2019-03-01 14:15:13,586 [main-76569] INFO  self.activiti.services.SelfActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,开始]
+2019-03-01 14:15:13,807 [main-76569] INFO  self.activiti.services.SelfActivitiServiceImpl - [部署 Activiti 工作引擎流程文件:bpmn/FinancialReport.bpmn20.xml,结束 部署Id:10001,部署名字:null]
+2019-03-01 14:15:13,956 [main-76569] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:15:14,136 [main-76569] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - [Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7c1e2a2d: startup date [Fri Mar 01 14:15:10 CST 2019]; root of context hierarchy]
+2019-03-01 14:15:14,185 [main-76569] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/activiti/start]}" onto public void self.activiti.controller.TestController.startProcessInstance()]
+2019-03-01 14:15:14,189 [main-76569] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2019-03-01 14:15:14,190 [main-76569] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - [Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2019-03-01 14:15:14,215 [main-76569] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:15:14,215 [main-76569] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - [Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]]
+2019-03-01 14:15:14,520 [main-76569] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Registering beans for JMX exposure on startup]
+2019-03-01 14:15:14,521 [main-76569] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Bean with name 'dataSource' has been autodetected for JMX exposure]
+2019-03-01 14:15:14,548 [main-76569] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]]
+2019-03-01 14:15:14,557 [main-76569] INFO  org.apache.coyote.http11.Http11NioProtocol - [Starting ProtocolHandler ["http-nio-10011"]]
+2019-03-01 14:15:14,580 [main-76569] INFO  org.apache.tomcat.util.net.NioSelectorPool - [Using a shared selector for servlet write/read]
+2019-03-01 14:15:14,592 [main-76569] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - [Tomcat started on port(s): 10011 (http) with context path '']
+2019-03-01 14:15:14,596 [main-76569] INFO  self.activiti.ActivitiApplication - [Started ActivitiApplication in 4.317 seconds (JVM running for 5.21)]
+2019-03-01 14:16:08,168 [http-nio-10011-exec-1-76569] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [Initializing Spring FrameworkServlet 'dispatcherServlet']
+2019-03-01 14:16:08,169 [http-nio-10011-exec-1-76569] INFO  org.springframework.web.servlet.DispatcherServlet - [FrameworkServlet 'dispatcherServlet': initialization started]
+2019-03-01 14:16:08,185 [http-nio-10011-exec-1-76569] INFO  org.springframework.web.servlet.DispatcherServlet - [FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms]
+2019-03-01 14:16:08,203 [http-nio-10011-exec-1-76569] INFO  self.activiti.services.SelfActivitiServiceImpl - [创建 Activiti 流程实例:keyfinancialReport,开始]
+2019-03-01 14:16:08,244 [http-nio-10011-exec-1-76569] INFO  self.activiti.services.SelfActivitiServiceImpl - [创建 Activiti 流程实例:keyfinancialReport,结束]
+2019-03-01 14:19:31,928 [Thread-15-76569] INFO  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - [Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7c1e2a2d: startup date [Fri Mar 01 14:15:10 CST 2019]; root of context hierarchy]
+2019-03-01 14:19:31,930 [Thread-15-76569] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans on shutdown]
+2019-03-01 14:19:31,931 [Thread-15-76569] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - [Unregistering JMX-exposed beans]
+2019-03-01 14:19:31,933 [Thread-15-76569] INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor - [Shutting down the default async job executor [org.activiti.spring.SpringAsyncExecutor].]
+2019-03-01 14:19:31,933 [activiti-acquire-timer-jobs-76569] INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable - [{} stopped async job due acquisition]
+2019-03-01 14:19:31,933 [activiti-acquire-async-jobs-76569] INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable - [{} stopped async job due acquisition]
+2019-03-01 14:19:31,933 [activiti-reset-expired-jobs-76569] INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable - [{} stopped resetting expired jobs]
+2019-03-01 14:19:31,935 [Thread-15-76569] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown initiated...]
+2019-03-01 14:19:31,944 [Thread-15-76569] INFO  com.zaxxer.hikari.HikariDataSource - [activiti - Shutdown completed.]
