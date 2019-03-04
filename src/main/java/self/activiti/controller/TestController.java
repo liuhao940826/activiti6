@@ -20,7 +20,7 @@ public class TestController {
     SelfActivitiService selfActivitiService;
 
     @RequestMapping("/start")
-    public  void startProcessInstance() {
+    public  String startProcessInstance() {
 
         selfActivitiService.startProcessInstanceByKey(Constants.KEY);
 
@@ -28,7 +28,7 @@ public class TestController {
 
         System.out.println(financialReport.getId());
 
-
+        return financialReport.getId();
 
     }
 }
